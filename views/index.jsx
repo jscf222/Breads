@@ -9,19 +9,20 @@ function Index ({breads}) {
   <a href="/breads/new"><button>Add a new bread</button></a>
 </div>
 
-        {/* <p> i have {breads[0].name} bread!</p> */}
+        {/* { <p> i have {breads[0].name} bread!</p> } */}
         <ul>
-            {
-                breads.map((bread, index)=>{
-                    return(
-                    <li key={index}>
-                        <a href={`/breads/${index}`}>{bread.name}</a>
-                        </li>
-                    )
-                })
-            }
-
-        </ul>
+                {
+                    breads.map((bread, id) => {
+                        return (
+                            <li key={id}>
+                                <a href={`/breads/${bread.id}`}>
+                                {bread.name}
+                                </a>
+                            </li>
+                        )
+                    })
+                }
+            </ul>
       </Default>
     )
 }
