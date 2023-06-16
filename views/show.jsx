@@ -16,14 +16,15 @@ function Show ({bread,id}){
     have gluten.
   </p>
   <img src={bread.image} alt={bread.name} />
-  <p>Baked by {bread.baker}</p>
+  {/* <p>Baked by {bread.baker}</p> */}
+  <p>{bread.getBakedBy()}</p>
   <li><a href="/breads">Go home</a></li>
   <form action={`/breads/${bread.id}?_method=DELETE`} method='POST'>
     <input type='submit' value='DELETE'/>
  
   </form>
-  <img src={bread.image} alt={bread.name} />
-<p>{bread.getBakedBy()}</p>
+  {/* <img src={bread.image} alt={bread.name} /> */}
+
           
 
    <br/><a href={`/breads/${bread.id}/edit`}><button>Edit</button></a>
